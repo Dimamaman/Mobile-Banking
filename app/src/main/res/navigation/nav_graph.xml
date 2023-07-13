@@ -84,6 +84,18 @@
         <action
             android:id="@+id/action_homeScreen_to_transferScreen"
             app:destination="@id/transferScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_exchangeScreen"
+            app:destination="@id/exchangeScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_historyScreen"
+            app:destination="@id/historyScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_paymentsScreen"
+            app:destination="@id/paymentsScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_cardDetailsScreen"
+            app:destination="@id/cardDetailsScreen" />
     </fragment>
     <fragment
         android:id="@+id/addCardScreen"
@@ -119,5 +131,29 @@
         <argument
             android:name="token"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/exchangeScreen"
+        android:name="uz.gita.dima.mobile_banking.presentation.ui.exchange.ExchangeScreen"
+        android:label="ExchangeScreen"
+        tools:layout="@layout/screen_exchange"/>
+    <fragment
+        android:id="@+id/historyScreen"
+        android:name="uz.gita.dima.mobile_banking.presentation.ui.history.HistoryScreen"
+        android:label="HistoryScreen"
+        tools:layout="@layout/screen_history"/>
+    <fragment
+        android:id="@+id/paymentsScreen"
+        android:name="uz.gita.dima.mobile_banking.presentation.ui.payment.PaymentsScreen"
+        android:label="PaymentsScreen"
+        tools:layout="@layout/screen_payments"/>
+    <fragment
+        android:id="@+id/cardDetailsScreen"
+        android:name="uz.gita.dima.mobile_banking.presentation.ui.card.detail.CardDetailsScreen"
+        android:label="CardDetailsScreen"
+        tools:layout="@layout/screen_card_detail">
+        <argument
+            android:name="card_data"
+            app:argType="uz.gita.dima.mobile_banking.data.remote.response.card.CardData" />
     </fragment>
 </navigation>
