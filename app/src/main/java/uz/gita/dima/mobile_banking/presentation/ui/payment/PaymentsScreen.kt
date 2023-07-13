@@ -5,12 +5,14 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import ru.ldralighieri.corbind.view.clicks
 import uz.gita.dima.mobile_banking.R
 import uz.gita.dima.mobile_banking.databinding.ScreenPaymentsBinding
 import uz.gita.dima.mobile_banking.domain.models.enums.PaymentDirection
@@ -55,6 +57,11 @@ class PaymentsScreen: Fragment(R.layout.screen_payments) {
             listPayments.adapter = adapter
             adapter.submitList(PaymentType.values().toList())
         }.launchIn(viewLifecycleOwner.lifecycleScope)
+
+        viewBinding.imageBack.clicks()
+            .onEach {
+                findNavController().navigateUp()
+            }.launchIn(lifecycleScope)
 
         paymentGridAdapter.setItemClickListener {
             log("Grid")

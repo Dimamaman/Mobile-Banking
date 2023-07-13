@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mobile-Banking</string>
+    <string name="app_name">Gita Bank</string>
 
     <string name="sign_in">Sign in</string>
     <string name="phone_number">Phone number</string>
@@ -63,4 +63,5 @@
     <string name="exchanges">Exchanges</string>
     <string name="monitoring">Monitoring</string>
     <string name="chat">Chat</string>
+    <string name="gita_bank">Gita Bank</string>
 </resources>

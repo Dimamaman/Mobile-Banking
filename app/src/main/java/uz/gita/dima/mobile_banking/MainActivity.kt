@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         if (isOpenPin) {
             isOpenPin = false
             isFirstApp = false
-//            findNavController(R.id.fragmentContainerView).navigate(R.id.action_global_pinScreen)
+            findNavController(R.id.fragmentContainerView).navigate(R.id.action_global_pinScreen)
         }
     }
 

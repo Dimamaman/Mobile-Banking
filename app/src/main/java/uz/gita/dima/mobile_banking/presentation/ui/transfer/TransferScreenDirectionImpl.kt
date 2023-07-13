@@ -15,14 +15,18 @@ class TransferScreenDirectionImp @Inject constructor(
         token: String
     ) {
 
-//        navigator.navigateTo(
-//            TransferScreenDirections.actionTransferScreenToTransferVerifyScreen(
-//                cardData = cardData,
-//                recipientName = receiverName,
-//                recipientPan = receiverPan,
-//                amount = amount,
-//                token = token
-//            )
-//        )
+        navigator.navigateTo(
+            TransferScreenDirections.actionTransferScreenToTransferVerifyScreen(
+                cardDat = cardData,
+                recipientName = receiverName,
+                recipientPan = receiverPan,
+                amount = amount,
+                token = token
+            )
+        )
+    }
+
+    override suspend fun back() {
+        navigator.back()
     }
 }

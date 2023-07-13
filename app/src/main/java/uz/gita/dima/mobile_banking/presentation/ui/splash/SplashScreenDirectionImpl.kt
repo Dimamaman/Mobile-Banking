@@ -8,10 +8,10 @@ class SplashScreenDirectionImpl @Inject constructor(
     private val navigator: Navigator
 ) : SplashScreenDirection {
     override suspend fun navigateToPassword() {
-//        navigator.navigateTo()  PinScreen
+        navigator.navigateTo(SplashScreenDirections.actionSplashScreenToPinScreen())
     }
 
     override suspend fun navigateToLogin() {
-//        navigator.navigateTo()  LoginScreen
+        navigator.navigateTo(SplashScreenDirections.actionSplashScreenToLoginScreen())
     }
 }

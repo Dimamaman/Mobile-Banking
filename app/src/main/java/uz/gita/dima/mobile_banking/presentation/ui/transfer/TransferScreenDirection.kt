@@ -12,4 +12,6 @@ interface TransferScreenDirection {
         token: String
     )
 
+    suspend fun back()
+
 }

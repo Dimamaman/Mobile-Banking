@@ -13,6 +13,8 @@ interface TransferViewModel : BaseViewModel {
 
     val openConfirmDialog: SharedFlow<Pair<CardData, String>>
 
+    fun back()
+
     fun getCards()
 
     fun getUser(cardNumber: String)

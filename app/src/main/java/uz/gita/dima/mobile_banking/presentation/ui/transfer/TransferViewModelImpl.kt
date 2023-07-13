@@ -34,6 +34,12 @@ class TransferViewModelImpl @Inject constructor(
 
     override val openConfirmDialog = MutableSharedFlow<Pair<CardData, String>>()
 
+    override fun back() {
+        viewModelScope.launch {
+            direction.back()
+        }
+    }
+
     private var cardsList: List<CardData> = emptyList()
 
     override fun getCards() {
@@ -113,5 +119,4 @@ class TransferViewModelImpl @Inject constructor(
             direction.navigateToVerify(cardData, receiverName, receiverPan, amount, token)
         }
     }
-
 }

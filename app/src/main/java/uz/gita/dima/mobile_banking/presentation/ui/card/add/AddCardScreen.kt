@@ -66,6 +66,11 @@ class AddCardScreen : Fragment(R.layout.screen_add_card) {
             check()
         }.launchIn(viewLifecycleOwner.lifecycleScope)
 
+        viewBinding.imageBack.clicks()
+            .onEach {
+                findNavController().navigateUp()
+            }.launchIn(lifecycleScope)
+
 
         inputExpireDate.clicks().onEach {
             showChooseDate()

@@ -7,10 +7,10 @@ class LoginScreenDirectionImpl @Inject constructor(
     private val navigator: Navigator
 ) : LoginScreenDirection {
     override suspend fun navigateToRegister() {
-//        navigator.navigateTo(LoginScreenDirections.actionLoginScreenToRegisterScreen())
+        navigator.navigateTo(LoginScreenDirections.actionLoginScreenToRegisterScreen())
     }
 
     override suspend fun navigateToVerify() {
-//        navigator.navigateTo(LoginScreenDirections.actionLoginScreenToLoginVerifyScreen())
+        navigator.navigateTo(LoginScreenDirections.actionLoginScreenToLoginVerifyScreen())
     }
 }
